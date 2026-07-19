@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+  CARTA.HTML
+  Carta romántica que se escribe letra por letra.
+  El texto de la carta se edita en script.js dentro de la
+  constante "carta" (función iniciarCarta).
+-->
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Para ti ❤️</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Dancing+Script:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="fondo-romantico"></div>
+  <div class="vineta-vela"></div>
+  <div class="capa-brillos"></div>
+  <div id="contenedor-particulas"></div>
+
+  <main class="pantalla">
+    <article class="tarjeta-cristal hoja-carta">
+      <h1 class="encabezado-carta">Una carta para ti</h1>
+      <p id="cuerpo-carta" class="cuerpo-carta"></p>
+
+      <button id="boton-te-amo" class="boton boton-primario boton-te-amo" type="button">
+        ❤️ Te amo
+      </button>
+    </article>
+
+    <button id="boton-volver" class="boton boton-secundario boton-volver" type="button">⬅ Volver</button>
+  </main>
+
+  <!-- Reproductor de música flotante -->
+  <div class="reproductor-musica">
+    <button id="boton-musica" class="boton-musica" type="button" aria-label="Reproducir o pausar música">⏸</button>
+    <div id="onda-musica" class="onda-musica" aria-hidden="true">
+      <span></span><span></span><span></span><span></span>
+    </div>
+    <audio id="audio-fondo"></audio>
+  </div>
+
+  <!-- Capa donde se dibuja la lluvia de corazones al presionar "Te amo" -->
+  <div id="lluvia-corazones"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

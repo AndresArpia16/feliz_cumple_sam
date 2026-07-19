@@ -1,0 +1,5 @@
+Coloca aqui la cancion de fondo.
+Nombre esperado por defecto (puedes cambiarlo en static/js/script.js,
+dentro de la funcion iniciarReproductor -> variable "song"):
+
+  cancion.mp3

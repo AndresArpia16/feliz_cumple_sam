@@ -1,0 +1,11 @@
+Coloca aqui tus fotografias para el carrusel de aniversario.html
+Nombres esperados por defecto (puedes cambiarlos en static/js/script.js,
+dentro de la funcion iniciarCarrusel -> arreglo "fotos"):
+
+  foto1.jpg
+  foto2.jpg
+  foto3.jpg
+  foto4.jpg
+  foto5.jpg
+
+Tambien puedes usar .png o .webp, solo actualiza el arreglo "fotos".

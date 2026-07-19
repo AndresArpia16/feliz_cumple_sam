@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--
+  INDEX.HTML
+  Pantalla de bienvenida.
+  Contiene:
+    1) Animación de máquina de escribir "Feliz Cumpleaños ❤️"
+    2) Subtexto y botones "Siguiente" / "Atrás"
+    3) Escena alternativa (oculta al inicio) cuando se presiona "Atrás"
+-->
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>feliz cumple sam❤️</title>
+
+  <!-- Tipografías: Playfair Display (títulos), Dancing Script (acentos), Poppins (UI) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Dancing+Script:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Capas de fondo: degradado romántico + viñeta + brillos -->
+  <div class="fondo-romantico"></div>
+  <div class="vineta-vela"></div>
+  <div class="capa-brillos"></div>
+  <div id="contenedor-particulas"></div>
+
+  <!-- ===================== PANTALLA PRINCIPAL ===================== -->
+  <main id="pantalla-principal" class="pantalla">
+    <h1 id="titulo-typewriter" class="titulo-typewriter" aria-live="polite"></h1>
+
+    <p id="subtexto" class="subtexto" style="display: none;">
+      te amo musho...
+    </p>
+
+    <div id="grupo-botones" class="grupo-botones" style="display: none;">
+      <button id="boton-siguiente" class="boton boton-primario" type="button">❤️ Siguiente</button>
+      <button id="boton-atras" class="boton boton-secundario" type="button">⬅ Atrás</button>
+    </div>
+  </main>
+
+  <!-- ===================== ESCENA TRISTE (oculta al inicio) ===================== -->
+  <section id="escena-triste" class="pantalla escena-triste" style="display: none;">
+
+    <!-- Ilustración genérica de un perrito triste, hecha en SVG.
+         (No se usa el personaje Snoopy por ser una obra con derechos de autor;
+         puedes reemplazar este SVG por tu propia imagen en la carpeta images/) -->
+    <svg class="perrito-triste" viewBox="0 0 200 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Perrito triste">
+      <ellipse cx="100" cy="150" rx="55" ry="10" fill="#000" opacity="0.15" />
+      <!-- orejas -->
+      <path d="M55 60 Q30 40 40 90 Q55 100 65 80 Z" fill="#f2e9df" />
+      <path d="M145 60 Q170 40 160 90 Q145 100 135 80 Z" fill="#f2e9df" />
+      <!-- cabeza -->
+      <ellipse cx="100" cy="90" rx="52" ry="46" fill="#fbf3ea" />
+      <!-- mancha -->
+      <path d="M60 70 Q75 50 95 65 Q80 80 60 70 Z" fill="#d9b26a" opacity="0.5" />
+      <!-- ojos tristes -->
+      <path d="M75 85 Q82 78 90 85" stroke="#4a2e20" stroke-width="3" fill="none" stroke-linecap="round" />
+      <path d="M110 85 Q118 78 125 85" stroke="#4a2e20" stroke-width="3" fill="none" stroke-linecap="round" />
+      <circle cx="82" cy="92" r="3.5" fill="#4a2e20" />
+      <circle cx="118" cy="92" r="3.5" fill="#4a2e20" />
+      <!-- lagrimas -->
+      <path class="gota-lagrima" d="M82 98 q4 8 0 12 q-4 -4 0 -12" fill="#a53564" />
+      <path class="gota-lagrima" d="M118 98 q4 8 0 12 q-4 -4 0 -12" fill="#a53564" style="animation-delay: 0.5s;" />
+      <!-- nariz y boca triste -->
+      <ellipse cx="100" cy="105" rx="7" ry="5" fill="#4a2e20" />
+      <path d="M85 118 Q100 108 115 118" stroke="#4a2e20" stroke-width="2.5" fill="none" stroke-linecap="round" />
+    </svg>
+
+    <p class="texto-triste">
+      ok...🥺<br />
+      Por favor presiona Siguiente ❤️
+    </p>
+
+    <button id="boton-regresar" class="boton boton-secundario" type="button">⬅ Regresar</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

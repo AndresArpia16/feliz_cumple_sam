@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+  ANIVERSARIO.HTML
+  Página sorpresa secreta, solo accesible con la segunda contraseña.
+  El carrusel de fotos se genera dinámicamente en script.js
+  a partir del arreglo "fotos" (función iniciarCarrusel).
+-->
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>te amo musho ❤️</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Dancing+Script:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="fondo-romantico"></div>
+  <div class="vineta-vela"></div>
+  <div class="capa-brillos"></div>
+  <div id="contenedor-particulas"></div>
+
+  <main class="pantalla">
+    <h1 class="titulo-aniversario">te amo musho ❤️</h1>
+
+    <div class="carrusel">
+      <div id="carrusel-track" class="carrusel-track">
+        <!-- Los slides se generan dinámicamente desde script.js -->
+      </div>
+
+      <button id="flecha-izq" class="flecha-carrusel flecha-izq" type="button" aria-label="Foto anterior">‹</button>
+      <button id="flecha-der" class="flecha-carrusel flecha-der" type="button" aria-label="Foto siguiente">›</button>
+
+      <div id="carrusel-controles" class="carrusel-controles">
+        <!-- Los puntos indicadores se generan dinámicamente desde script.js -->
+      </div>
+    </div>
+  </main>
+
+  <!-- Reproductor de música flotante -->
+  <div class="reproductor-musica">
+    <button id="boton-musica" class="boton-musica" type="button" aria-label="Reproducir o pausar música">⏸</button>
+    <div id="onda-musica" class="onda-musica" aria-hidden="true">
+      <span></span><span></span><span></span><span></span>
+    </div>
+    <audio id="audio-fondo"></audio>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
